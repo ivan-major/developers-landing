@@ -1,0 +1,72 @@
+.button {
+  width: 270px;
+  height: 60px;
+
+  color: $white;
+  border-radius: 5px;
+  background-color: $green;
+  text-decoration: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &:hover {
+    box-sizing: border-box;
+    border: 2px solid $blue;
+  }
+
+  &:active {
+    background-color: $blue;
+  }
+
+  &--header {
+    width: 120px;
+    height: 30px;
+
+    display: none;
+
+    @include onTablet {
+      margin-left: 20px;
+      display: flex;
+    }
+
+    @include onDesktop {
+      width: 170px;
+      height: 40px;
+    }
+
+    &:hover {
+      border: 2px solid $white;
+    }
+
+    &:active {
+      background-color: $white;
+      color: $blue;
+    }
+
+    &-cross {
+      display: none;
+    }
+  }
+
+  &--banner {
+    width: 100%;
+
+    @include onTablet {
+      width: 270px;
+      height: 60px;
+    }
+  }
+
+  &--form {
+    border: none;
+    cursor: pointer;
+  }
+}

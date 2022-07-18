@@ -1,0 +1,66 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  &__item {
+    display: none;
+
+    &--active {
+      display: flex;
+    }
+  }
+
+  &__buttons {
+    width: 100%;
+    margin-top: 25px;
+
+    display: flex;
+    justify-content: center;
+
+    &--examples {
+      @include onTablet {
+        display: none;
+      }
+    }
+  }
+
+  &__button {
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+
+    border: 2px solid $blue;
+    border-radius: 15px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: $blue;
+    }
+
+    &--prev {
+      background-image: url(../images/stages/arrow_left.png);
+      margin-right: 100px;
+
+      &:hover {
+        background-image: url(../images/stages/arrow_left_hover.svg);
+      }
+
+      @include onDesktop {
+        margin-right: 30px;
+      }
+    }
+
+    &--next {
+      background-image: url(../images/stages/arrow_right.png);
+
+      &:hover {
+        background-image: url(../images/stages/arrow_right_hover.svg);
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.menu {
+  background-color: $blue;
+  height: 100vh;
+
+  @include onDesktop {
+    height: 100%;
+  }
+
+  &__content {
+    @include onDesktop {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__top {
+    &--cross {
+      padding: 10px 20px;
+
+      @include onDesktop {
+        padding: 0;
+      }
+    }
+
+    @include onDesktop {
+      width: 0;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: grid;
+    gap: 43px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    @include onDesktop {
+      display: flex;
+      gap: 35px;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: 800;
+
+    &:hover:after {
+      position: absolute;
+      content: "";
+      display: block;
+      height: 2px;
+      background-color: $white;
+      margin-top: 5px;
+      width: 100%;
+    }
+  }
+}

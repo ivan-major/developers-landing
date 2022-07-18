@@ -1,0 +1,24 @@
+.icon {
+  display: flex;
+  gap: 5px;
+
+  &__circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+
+    background-color: $white;
+  }
+
+  &--cross {
+    height: 20px;
+    background-image: url(../images/cross.svg);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+
+    @include onDesktop {
+      height: 0;
+    }
+  }
+}

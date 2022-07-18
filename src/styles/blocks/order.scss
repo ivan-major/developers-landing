@@ -1,0 +1,88 @@
+.order {
+  padding: 43px 0 50px;
+  position: relative;
+
+  @include onDesktop {
+    padding: 216px 0 180px;
+  }
+
+  &__title {
+    margin-bottom: 27px;
+
+    @include onDesktop {
+      margin-bottom: 45px;
+      text-align: left;
+    }
+
+    @include onFullDesktop {
+      margin-bottom: 51px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 180px;
+
+    background-image: url(../images/order/orders_mob.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 29px;
+
+    @include onTablet {
+      height: 350px;
+      width: 350px;
+      position: absolute;
+      right: 0;
+
+      margin-bottom: 0;
+    }
+
+    @include onDesktop {
+      height: 483px;
+      width: 690px;
+
+      background-image: url(../images/order/orders.png);
+
+      top: 137px;
+    }
+
+    @include onFullDesktop {
+      right: 144px;
+    }
+  }
+
+  &__content {
+    margin-bottom: 28px;
+
+    @include onTablet {
+      width: 60%;
+    }
+
+    @include onDesktop {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+
+    @include onFullDesktop {
+      margin-bottom: 45px;
+
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+
+  &__sphere {
+    display: none;
+
+    @include onDesktop {
+      display: block;
+
+      position: absolute;
+      top: 150px;
+    }
+
+    @include onFullDesktop {
+      left: 150px
+    }
+  }
+}

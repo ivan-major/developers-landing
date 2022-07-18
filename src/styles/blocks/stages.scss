@@ -1,0 +1,97 @@
+.stages {
+  padding: 45px 0;
+  position: relative;
+
+  @include onDesktop {
+    padding: 128px 0;
+    overflow: hidden;
+  }
+
+  &__title {
+    margin: 20px;
+
+    @include onTablet {
+      margin: 20px 50px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 84px;
+    }
+  }
+
+  &__block {
+    height: 615px;
+
+    box-sizing: border-box;
+    border: 2px solid $blue;
+    border-radius: 15px;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @include onTablet {
+      flex-direction: row;
+      height: 100%;
+    }
+
+    @include onDesktop {
+      width: 672px;
+      height: 390px;
+      padding: 40px;
+    }
+
+    &--content {
+      line-height: 25px;
+    }
+
+    &--title {
+      @include onTablet {
+        margin-bottom: 10px;
+      }
+
+      @include onDesktop {
+        margin-bottom: 20px;
+      }
+    }
+
+    &--img {
+      width: 250px;
+    }
+  }
+
+  &__sphere {
+    width: 40px;
+    position: absolute;
+    transform: translateX(-20px);
+
+    @include onDesktop {
+      width: 60px;
+      transform: none;
+      top: 129px;
+      left: 45px;
+    }
+
+    @include onFullDesktop {
+      left: 187px;
+    }
+  }
+
+  &__wave {
+    display: none;
+
+    @include onDesktop {
+      display: block;
+      position: absolute;
+      right: 45px;
+      bottom: 47px;
+    }
+
+    @include onFullDesktop {
+      right: 187px;
+    }
+  }
+}

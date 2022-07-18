@@ -1,0 +1,109 @@
+.service {
+  background-color: $blue;
+  padding: 16px 0 30px;
+  position: relative;
+
+  @include onTablet {
+    padding: 40px 0;
+  }
+
+  @include onDesktop {
+    padding: 120px 0;
+  }
+
+  &__img {
+    display: none;
+
+    @include onFullDesktop {
+      display: block;
+      position: absolute;
+      right: 10%;
+      bottom: 10%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__blocks {
+    display: grid;
+    gap: 10px;
+  }
+
+  &__block {
+    background-color: $white;
+    border-radius: 10px;
+    padding: 14px 24px;
+
+    cursor: pointer;
+
+    &--header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    &--item {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+  
+    &--circle {
+      width: 15px;
+      height: 15px;
+      background-color: $green;
+      border-radius: 50%;
+      margin-right: 18px;
+
+      &-show {
+        background-color: $blue;
+      }
+    }
+
+    &--title {
+      width: 100%;
+
+      &-show {
+        line-height: 27px;
+        font-weight: 800;
+      }
+    }
+
+    &--arrow {
+      width: 24px;
+      height: 13px;
+
+      background-image: url(../images/arrows/arrow_down.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      &-show {
+        background-image: url(../images/arrows/arrow_up.png);
+      }
+    }
+
+    &--content {
+      padding-bottom: 40px;
+      margin-top: 20px;
+      width: calc(100% - 25px);
+
+      &::before {
+        content: "";
+        width: 2px;
+        background-color: $black;
+      }
+
+      &-hidden {
+        display: none;
+      }
+
+      &-show {
+        display: flex;
+        gap: 25px;
+      }
+    }
+  }
+}

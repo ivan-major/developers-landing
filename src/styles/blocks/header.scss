@@ -1,0 +1,9 @@
+.header {
+  background-color: $blue;
+
+  @include onDesktop {
+    height: 95px;
+    display: flex;
+    align-items: center;
+  }
+}
