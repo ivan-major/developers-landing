@@ -97,12 +97,15 @@
 
       &:hover {
         opacity: 1;
+        transition: opacity 1s;
       }
     }
 
     &:hover {
       background-color: $blue;
       background-image: none;
+
+      transition: all 1s;
     }
   }
 
